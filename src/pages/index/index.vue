@@ -3,6 +3,7 @@
 		<image class="logo" src="/static/logo.png"></image>
 		<view>
 			<text class="title">{{title}}</text>
+			<text @click="openPage">跳转到home</text>
 		</view>
 	</view>
 </template>
@@ -18,7 +19,12 @@
 
 		},
 		methods: {
-
+			openPage() {
+				console.log('点击了跳转');
+				this.$Router.push({
+					name: "home"
+				})
+			}
 		}
 	}
 </script>
