@@ -5,12 +5,14 @@ import minRequest from './api'
 import ABCache from './ABCache' // 缓存封装
 import {router,RouterMount} from './router.js'  //路径换成自己的
 import uView from "uview-ui";
-
+import cuCustom from './colorui/components/cu-custom.vue' // 自定义导航栏
 Vue.use(router)
 Vue.use(uView);
 Vue.use(ABCache) // 缓存
 Vue.use(MinRequest)  // 请求
 
+
+Vue.component('cu-custom', cuCustom)
 let cache = new ABCache();
 uni.getSystemInfo({
 	success: function(e) {

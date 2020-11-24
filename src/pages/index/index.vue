@@ -1,9 +1,14 @@
 <template>
-	<view class="content">
-		<image class="logo" src="/static/logo.png"></image>
-		<view>
-			<text class="title">{{title}}</text>
+	<view class="container">
+		<cu-custom bgColor="bg-blue" :isBack="true">
+			<block slot="backText">返回</block>
+			<block slot="content">登录</block>
+		</cu-custom>
+		<view class="bg-blue padding-xl">
 			<text @click="openPage">跳转到home</text>
+		</view>
+		<view>
+			
 		</view>
 	</view>
 </template>
@@ -16,7 +21,9 @@
 			}
 		},
 		onLoad() {
-
+			this.$cache.set("_name",'zhangsan',0)
+			let name = this.$cache.get("_name")
+			console.log("缓存测试",name);
 		},
 		methods: {
 			openPage() {
@@ -29,27 +36,8 @@
 	}
 </script>
 
-<style>
-	.content {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-	}
-
-	.logo {
-		height: 200rpx;
-		width: 200rpx;
-		margin: 200rpx auto 50rpx auto;
-	}
-
-	.text-area {
-		display: flex;
-		justify-content: center;
-	}
-
-	.title {
-		font-size: 36rpx;
-		color: #8f8f94;
+<style lang="scss">
+	.container{
+		
 	}
 </style>
