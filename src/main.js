@@ -1,11 +1,49 @@
 import Vue from 'vue'
 import App from './App'
-
+import MinRequest from './MinRequest'
+import minRequest from './api'
+import ABCache from './ABCache' // 缓存封装
 import {router,RouterMount} from './router.js'  //路径换成自己的
-Vue.use(router)
-
 import uView from "uview-ui";
+
+Vue.use(router)
 Vue.use(uView);
+Vue.use(ABCache) // 缓存
+Vue.use(MinRequest)  // 请求
+
+let cache = new ABCache();
+uni.getSystemInfo({
+	success: function(e) {
+		// #ifndef MP
+		cache.set("_statusBar", e.statusBarHeight, 0)
+		// Vue.prototype.StatusBar = e.statusBarHeight;
+		if (e.platform == 'android') {
+			cache.set("_customerBar", e.statusBarHeight + 50, 0)
+			// Vue.prototype.CustomBar = e.statusBarHeight + 50;
+		} else {
+			cache.set("_customerBar", e.statusBarHeight + 45, 0)
+			// Vue.prototype.CustomBar = e.statusBarHeight + 45;
+		};
+		// #endif
+
+		// #ifdef MP-WEIXIN
+		cache.set("_statusBar", e.statusBarHeight, 0)
+		// Vue.prototype.StatusBar = e.statusBarHeight;
+		let custom = wx.getMenuButtonBoundingClientRect();
+		cache.set("_custom", custom, 0)
+		cache.set("_customerBar", custom.bottom + custom.top - e.statusBarHeight, 0)
+		// Vue.prototype.Custom = custom;
+		// Vue.prototype.CustomBar = custom.bottom + custom.top - e.statusBarHeight;
+		// #endif		
+
+		// #ifdef MP-ALIPAY
+		cache.set("_statusBar", e.statusBarHeight, 0)
+		// Vue.prototype.StatusBar = e.statusBarHeight;
+		cache.set("_customerBar", e.statusBarHeight + e.titleBarHeight, 0)
+		// Vue.prototype.CustomBar = e.statusBarHeight + e.titleBarHeight;
+		// #endif
+	}
+})
 
 
 Vue.config.productionTip = false
