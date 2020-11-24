@@ -4,6 +4,10 @@ import App from './App'
 import {router,RouterMount} from './router.js'  //路径换成自己的
 Vue.use(router)
 
+import uView from "uview-ui";
+Vue.use(uView);
+
+
 Vue.config.productionTip = false
 
 App.mpType = 'app'
