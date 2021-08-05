@@ -7,8 +7,8 @@
 		<view class="bg-blue padding-xl">
 			<text @click="openPage">跳转到home</text>
 		</view>
-		<view>
-			
+		<view class="container__wrapper">
+			123
 		</view>
 	</view>
 </template>
@@ -38,6 +38,10 @@
 
 <style lang="scss">
 	.container{
-		
+		&__wrapper{
+			background-color: #FFFFFF;
+			font-size: 40rpx;
+			
+		}
 	}
 </style>

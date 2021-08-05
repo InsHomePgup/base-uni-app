@@ -59,6 +59,7 @@
     "core-js": "^3.6.5",
     "flyio": "^0.6.2",
     "regenerator-runtime": "^0.12.1",
+    "sass": "^1.37.5",
     "uni-read-pages": "^1.0.5",
     "uni-simple-router": "^2.0.0-alpha.2",
     "uview-ui": "^1.8.2",
@@ -83,7 +84,6 @@
     "jest": "^25.4.0",
     "mini-types": "*",
     "miniprogram-api-typings": "*",
-    "node-sass": "^5.0.0",
     "postcss-comment": "^2.0.0",
     "sass-loader": "^10.1.0",
     "vue-template-compiler": "^2.6.11"

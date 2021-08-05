@@ -32,6 +32,9 @@
 				<text>文字</text> 
 			</view>
 		</view>
+		<view class="container__wrapper">
+			123
+		</view>
 	</view>
 </template>
 
@@ -109,6 +112,10 @@
 	}
 </script>
 
-<style lang="scss">
-
+<style lang="scss" scoped>
+.container{
+	&__wrapper{
+		
+	}
+}
 </style>
