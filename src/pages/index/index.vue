@@ -20,9 +20,9 @@
 			}
 		},
 		onLoad() {
+			// 缓存测试
 			this.$cache.set("_name",'zhangsan',0)
 			let name = this.$cache.get("_name")
-			console.log("缓存测试",name);
 		},
 		methods: {
 			openPage() {

@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import App from './App'
+import store from './store/'
 import MinRequest from './MinRequest'
 import minRequest from './apis'
 import ABCache from './ABCache' // 缓存封装
@@ -10,7 +11,6 @@ Vue.use(router)
 Vue.use(uView)
 Vue.use(ABCache) // 缓存
 Vue.use(MinRequest) // 请求
-
 Vue.component('cu-custom', cuCustom)
 let cache = new ABCache()
 uni.getSystemInfo({
@@ -76,7 +76,8 @@ App.mpType = 'app'
 
 const app = new Vue({
 	...App,
-	minRequest
+	minRequest,
+	store
 })
 //v1.3.5起 H5端 你应该去除原有的app.$mount();使用路由自带的渲染方式
 // #ifdef H5
