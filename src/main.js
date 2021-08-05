@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App'
 import MinRequest from './MinRequest'
-import minRequest from './api'
+import minRequest from './apis'
 import ABCache from './ABCache' // 缓存封装
 import { router, RouterMount } from './router.js' //路径换成自己的
 import uView from 'uview-ui'
@@ -71,7 +71,7 @@ const prePage = () => {
 Vue.prototype.$api = { msg, prePage }
 
 Vue.config.productionTip = false
-
+Vue.config.devtools = false;
 App.mpType = 'app'
 
 const app = new Vue({

@@ -6,6 +6,7 @@
 			@author: 周柯
 	 -->
 	<view>
+		<u-navbar title="测试用主页"></u-navbar>
 		<text @click="openPage">跳转到home</text>
 	</view>
 </template>
@@ -14,11 +15,13 @@
 	export default {
 		onLoad(...options){
 			console.log(options)
-						console.log(this.$Route)
+			console.log(this.$Route)
 			this.loadData();
 		},
 		onReady(){
-			
+			// this.testRequest1()
+			// this.testRequest2()
+			// this.testRequest3()
 		},
 		data() {
 			return {
@@ -32,6 +35,30 @@
 			openPage(){
 				this.$Router.push({
 					name:"index"
+				})
+			},
+			// 使用方法一
+			testRequest1 () {
+				this.$ab.uniapp({wd: 'uni-app'}).then(res => {
+					this.res = res
+					console.log(res)
+				}).catch(err => {
+					console.log(err)
+				})
+			},
+			
+			// 使用方式二
+			async testRequest2 () {
+				try {
+					const res = await this.$ab.login({wd: 'uni-app'})
+					console.log(res)
+				} catch (err) {
+					console.log(err)
+				}
+			},
+			testRequest3(){
+				this.$get('/login',{name:'zhangsan'}).then(res=>{
+					console.log(res)
 				})
 			}
 		}

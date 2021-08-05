@@ -1,14 +1,13 @@
 <template>
 	<view class="container">
-		<cu-custom bgColor="bg-blue" :isBack="true">
-			<block slot="backText">返回</block>
-			<block slot="content">登录</block>
+		<cu-custom bgColor="bg-blue" :isBack="false">
+			<block slot="content">首页</block>
 		</cu-custom>
 		<view class="bg-blue padding-xl">
-			<text @click="openPage">跳转到home</text>
+			<text @click="openPage">路由测试</text>
 		</view>
 		<view class="container__wrapper">
-			123
+			123 Scss 测试
 		</view>
 	</view>
 </template>
@@ -29,7 +28,10 @@
 			openPage() {
 				console.log('点击了跳转');
 				this.$Router.push({
-					name: "home"
+					name: "home",
+					params:{
+						str:'路由传参调试'
+					}
 				})
 			}
 		}
