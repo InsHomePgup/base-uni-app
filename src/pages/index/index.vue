@@ -20,6 +20,9 @@
 			}
 		},
 		onLoad() {
+		  uni.showToast({
+        title:'123'
+      })
 			// 缓存测试
 			this.$cache.set("_name",'zhangsan',0)
 			let name = this.$cache.get("_name")
@@ -43,7 +46,7 @@
 		&__wrapper{
 			background-color: #FFFFFF;
 			font-size: 40rpx;
-			
+
 		}
 	}
 </style>

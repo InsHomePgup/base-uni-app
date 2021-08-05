@@ -123,19 +123,5 @@ MinCache.install = function (Vue, {timeout = 1200} = {}) {		// 安装Vue插件
  * 
  * this.$cache.clear()		// 清空所有缓存
  * 
- * 
- * 
- * 
- * 
- * 
- * 
  */
-
-
-
-
-
-
-
-
 export default MinCache

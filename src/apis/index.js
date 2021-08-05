@@ -1,7 +1,5 @@
 import MinRequest from '../MinRequest'
 const minRequest = new MinRequest()
-
-const path = require('path')
 const files = require.context('./modules/', true, /\.js$/);
 let apis = {}
 files.keys().forEach(key => {
