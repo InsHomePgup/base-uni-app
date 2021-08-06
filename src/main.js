@@ -12,6 +12,9 @@ Vue.use(uView)
 Vue.use(ABCache) // 缓存
 Vue.use(MinRequest) // 请求
 Vue.component('cu-custom', cuCustom)
+import abList from "./components/ABComponents/abList.vue"
+Vue.component('ab-list',abList)
+
 let cache = new ABCache()
 uni.getSystemInfo({
 	success: function(e) {

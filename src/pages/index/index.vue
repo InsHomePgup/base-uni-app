@@ -9,6 +9,11 @@
 		<view class="container__wrapper">
 			123 Scss 测试
 		</view>
+		<ab-list :loadData="loadData">
+			<slot slot-scope="{item,index}">
+				{{item.name}} {{index}}
+			</slot>
+		</ab-list>
 	</view>
 </template>
 
@@ -16,15 +21,24 @@
 	export default {
 		data() {
 			return {
-				title: 'Hello'
+				title: 'Hello',
+				loadData: () => {
+					return new Promise((resolve, reject) => {
+						resolve({
+							records: [{
+								name: 'zhangsan'
+							}, {
+								name: 'lisi'
+							}]
+						})
+					})
+				}
 			}
 		},
 		onLoad() {
-		  uni.showToast({
-        title:'123'
-      })
+
 			// 缓存测试
-			this.$cache.set("_name",'zhangsan',0)
+			this.$cache.set("_name", 'zhangsan', 0)
 			let name = this.$cache.get("_name")
 		},
 		methods: {
@@ -32,8 +46,8 @@
 				console.log('点击了跳转');
 				this.$Router.push({
 					name: "home",
-					params:{
-						str:'路由传参调试'
+					params: {
+						str: '路由传参调试'
 					}
 				})
 			}
@@ -42,8 +56,8 @@
 </script>
 
 <style lang="scss">
-	.container{
-		&__wrapper{
+	.container {
+		&__wrapper {
 			background-color: #FFFFFF;
 			font-size: 40rpx;
 
