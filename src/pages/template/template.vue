@@ -3,7 +3,7 @@
 			@name:模板文件
 			@desc：用于创建新页面
 			@date：2020-10-22
-			@author: 周柯
+			@author: 
 	 -->
 	<view>
 		<!-- 

@@ -107,8 +107,8 @@
 				} else { // 有数据
 					let addList = []
 					result.records.forEach(item => { // 直接加入到列表里
-						addList.push(this.dataFormat(item))
-						// addList.push(item)
+						// addList.push(this.dataFormat(item)) // 传参格式化
+						addList.push(item)
 					})
 					this.list = this.list.concat(addList) // 把数据追加到列表里面
 					if (result.records.length < this.pageSize) { // 有数据,但是数据不够了,进入nomore

@@ -5,7 +5,7 @@
 			@import:
 			import xxx from "@/components/ab-components/xxx.vue"
 			@date：2020-11-01
-			@author: 周柯
+			@author: 
 	 -->
 	<view>
 		<view>

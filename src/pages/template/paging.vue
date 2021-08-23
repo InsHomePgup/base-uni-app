@@ -4,7 +4,7 @@
 			@desc:		常见的上拉加载，下拉刷新页面
 			这是单纯的列表
 			@date：2020-12-05
-			@author: Abraham
+			@author: 
 	 -->
 	<view>
 		<!-- 

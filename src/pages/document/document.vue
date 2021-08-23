@@ -3,7 +3,7 @@
 			@name:文档页面
 			@desc：如何建立良好的代码风格？
 			@date：2020-10-22
-			@author:Abraham
+			@author:InsHomePgup
 			@Todo:如何更好的写出适合多人开发的代码呢?
 			
 			以下内容只适合  vue  后缀的文件，不适合  nvue 的文件，nvue的文件请参考官网的文档。
@@ -14,7 +14,9 @@
 			u-view   框架  https://www.uviewui.com/
 			
 			css 框架  color ui  在主目录的 colorui 里,已经全局引入,可直接使用
-			路由文档 		http://hhyang.cn/  	  路由跳转的问题都去这里找
+			路由(uni-simple-router)文档 		http://hhyang.cn/  	  路由跳转的问题都去这里找
+			
+			styles:引入了sass，按模块写sass
 	 -->
 	<view class="container">
 		<!--
@@ -24,6 +26,10 @@
 			<block slot="backText">返回</block>
 			<block slot="content">导航栏名字</block>
 		</cu-custom>
+		<!-- 
+			u-view的导航
+		 -->
+		 <u-navbar></u-navbar>
 		<view class="img-box">
 			<!-- 所有图片使用这个组件   ,u-view框架的图片组件 -->
 			<u-image>图片</u-image>
