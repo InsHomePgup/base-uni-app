@@ -3,7 +3,7 @@
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
-## 使用uni-simple-router+min-request+min-cache+u-view+color-ui的uni-app项目
+## 使用uni-simple-router + min-request + min-cache + u-view + color-ui + dayjs 的uni-app项目
 
 
 
