@@ -9,11 +9,11 @@
 		<view class="container__wrapper">
 			123 Scss 测试
 		</view>
-		<ab-list :loadData="loadData">
+<!-- 		<ab-list :loadData="loadData">
 			<slot slot-scope="{item,index}">
 				{{item.name}} {{index}}
 			</slot>
-		</ab-list>
+		</ab-list> -->
 	</view>
 </template>
 
@@ -36,7 +36,12 @@
 			}
 		},
 		onLoad() {
-
+			// 云函数测试
+			// uniCloud.callFunction({
+			// 	name:"test"
+			// }).then(res=>{
+			// 	console.log("调用云函数的返回值",res)
+			// })
 			// 缓存测试
 			this.$cache.set("_name", 'zhangsan', 0)
 			let name = this.$cache.get("_name")
