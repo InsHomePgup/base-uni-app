@@ -106,6 +106,19 @@ class MinCache {  // 缓存插件
     }
     return value
   }
+  
+  /**
+   * @param {Object} cacheNameList    需要保留的缓存的列表
+   * [cache1,cache2,cache3]
+   * // 清空当前的其他缓存，保留一部分缓存
+   */
+  clearOther(cacheNameList){
+	  // 1. 先用map装当前需要保留的缓存
+	  // 2. 清空缓存
+	  // 3. 载入保留的缓存
+  	
+  }
+  
 }
 
 MinCache.install = function (Vue, {timeout = 1200} = {}) {		// 安装Vue插件
