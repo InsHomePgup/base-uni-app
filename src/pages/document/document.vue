@@ -3,6 +3,7 @@
 			@name:文档页面
 			@desc：如何建立良好的代码风格？
 			@date：2020-10-22
+			@update:2021-11-03
 			@author:InsHomePgup
 			@Todo:如何更好的写出适合多人开发的代码呢?
 			
@@ -94,7 +95,7 @@
 			 */
 			openPage(){
 				this.$Router.push({
-					name:"跳转页面的注册名"  // router/modules/home.js  注册   
+					name:"跳转页面的注册名"  // pages.json 里注册name
 				})
 			},
 			setCache(){		
