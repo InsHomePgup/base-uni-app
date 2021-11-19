@@ -17,8 +17,8 @@
 				{{content}}
 			</view>
 			<view class="cu-bar bg-white solid-top">
-				<view class="action margin-0 flex-sub text-green solid-left" @tap="cancel">取消</view>
-				<view class="action margin-0 flex-sub  solid-left" @tap="confirm">确定</view>
+				<view class="action margin-0 flex-sub text-green solid-left" @tap="confirm">确认</view>
+				<view class="action margin-0 flex-sub  solid-left" @tap="cancel">取消</view>
 			</view>
 		</view>
 	</view>
