@@ -62,7 +62,8 @@
     "dayjs": "^1.10.6",
     "flyio": "^0.6.2",
     "regenerator-runtime": "^0.12.1",
-    "sass": "^1.37.5",
+    "sass": "^1.49.10",
+    "sass-loader": "^8.0.2",
     "uni-read-pages": "^1.0.5",
     "uni-simple-router": "^2.0.6",
     "uview-ui": "^1.8.4",
@@ -88,7 +89,6 @@
     "mini-types": "^0.1.7",
     "miniprogram-api-typings": "^3.4.2",
     "postcss-comment": "^2.0.0",
-    "sass-loader": "^10.2.0",
     "vue-template-compiler": "^2.6.14"
   },
   "browserslist": [
