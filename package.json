@@ -65,7 +65,7 @@
     "sass": "^1.49.10",
     "sass-loader": "^8.0.2",
     "uni-read-pages": "^1.0.5",
-    "uni-simple-router": "^2.0.6",
+    "uni-simple-router": "^2.0.8-beta.3",
     "uview-ui": "^1.8.4",
     "vue": "^2.6.14",
     "vuex": "^3.6.2"

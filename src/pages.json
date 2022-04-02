@@ -1,53 +1,26 @@
 {
-	"easycom": {
-			"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
-	},
-	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
-		{
-			"path": "pages/index/index",
-			"aliasPath":"/",
-			"name":"index",
-			"style": {
-				"navigationBarTitleText": "uni-app"
-			}
-		}
-	    ,{
-            "path" : "pages/index/home",
-			"aliasPath":"/home",
-			"name":"home",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/public/login",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/template/paging",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
+    "easycom": {
+        "^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+    },
+    "pages": [
+        {
+            "path": "pages/index/index",
+            "aliasPath": "/",
+            "name": "index"
+        },
+        {
+            "path": "pages/index/home",
+            "aliasPath": "/home",
+            "name": "home"
+        },
+        {
+            "path": "pages/public/login"
+        },
+        {
+            "path": "pages/template/paging"
         }
     ],
-	
-	"globalStyle": {
-		"navigationStyle":"custom"
-		// "navigationBarTextStyle": "black",
-		// "navigationBarTitleText": "uni-app",
-		// "navigationBarBackgroundColor": "#F8F8F8",
-		// "backgroundColor": "#F8F8F8"
-	}
+    "globalStyle": {
+        "navigationStyle": "custom"
+    }
 }
-
