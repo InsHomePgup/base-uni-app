@@ -18,7 +18,8 @@ minRequest.interceptors.response((response) => {
 
 // 设置默认配置
 minRequest.setConfig((config) => {
-	config.baseURL = 'https://www.baidu.com'
+	// config.baseURL = 'https://www.baidu.com'
+	config.baseURL = 'http://127.0.0.1:7001'
 	return config
 })
 

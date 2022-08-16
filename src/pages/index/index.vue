@@ -9,6 +9,7 @@
 		<view class="container__wrapper">
 			123 Scss 测试
 		</view>
+		<!-- <view @click="">点击发送接口</view> -->
 <!-- 		<ab-list :loadData="loadData">
 			<slot slot-scope="{item,index}">
 				{{item.name}} {{index}}

@@ -8,6 +8,7 @@
 	<view>
 		<u-navbar title="测试用主页"></u-navbar>
 		<text @click="openPage">跳转到home</text>
+		<!-- <view @click="">接口</view> -->
 	</view>
 </template>
 
@@ -21,7 +22,7 @@
 		onReady(){
 			// this.testRequest1()
 			// this.testRequest2()
-			// this.testRequest3()
+			this.testRequest3()
 		},
 		data() {
 			return {
@@ -57,7 +58,7 @@
 				}
 			},
 			testRequest3(){
-				this.$get('/login',{name:'zhangsan'}).then(res=>{
+				this.$post('/addExercise',{title:"登山",desc:"爬山"}).then(res=>{
 					console.log(res)
 				})
 			}
