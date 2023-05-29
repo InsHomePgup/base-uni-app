@@ -4,6 +4,7 @@ import {
 } from 'uni-simple-router';
 
 const router = createRouter({
+	debugger:true,
 	platform: process.env.VUE_APP_PLATFORM,
 	routes: [...ROUTES,
 		{
